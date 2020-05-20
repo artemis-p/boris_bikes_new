@@ -1,15 +1,18 @@
 require 'docking_station'
 
 describe DockingStation do
-  subject { docking_station }
+  # subject { docking_station }
 
   context "release a bike" do
     let(:docking_station) { DockingStation.new }
-    it { should respond_to :release_bike }
+    it { is_expected.to respond_to :release_bike }
   end
-  # it "responds to release bike" do
-  #   expect(subject).to respond_to :release_bike
-  # end
+
+
+  it "releases working bikes" do
+    bike = subject.release_bike
+    expect(bike).to be_working
+  end
 
  
 end

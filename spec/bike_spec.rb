@@ -5,7 +5,7 @@ describe Bike do
 
   context "responds to method working" do
     let(:bike) { Bike.new }
-    it { should respond_to :working?}
+    it { is_expected.to respond_to :working?}
   end
 
 end
